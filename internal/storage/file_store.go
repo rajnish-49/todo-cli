@@ -33,6 +33,7 @@ func (fs *FileStore) Load() ([]todo.Task, error) {
 		return []todo.Task{}, nil
 	}
 
+	// converts json into Go data structure (slice of Task)
 	err = json.Unmarshal(data, &tasks) // returns either error or nil
 	if err != nil {
 		return nil, err

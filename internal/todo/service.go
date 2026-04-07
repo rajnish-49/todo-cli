@@ -21,7 +21,7 @@ func NewService(store Store) *Service {
 	}
 }
 
-// method that belongs tp Service struct 
+// method that belongs tp Service struct
 func (s *Service) ListTasks() ([]Task, error) {
 	tasks, err := s.store.Load()
 	if err != nil {
@@ -101,4 +101,3 @@ func (s *Service) DeleteTask(id int) error {
 
 	return errors.New("task not found")
 }
-

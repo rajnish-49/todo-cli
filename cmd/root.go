@@ -9,7 +9,7 @@ import (
 	"todo-cli/internal/todo"
 )
 
-//service is stored inside that struct 
+// service is stored inside that struct
 type CommandHandler struct {
 	service *todo.Service
 }
